@@ -1,1 +1,5 @@
 .DS_Store
+Assets.xcassets/
+Base.lproj/
+Info.plist
+../CalculatorInSwift.xcodeproj/
