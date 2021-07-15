@@ -1,15 +1,13 @@
 //
-//  ViewController.swift
-//  CalculatorInSwift
 //
-//  Created by crus on 6/20/21.
+//  Created by Romany GirGis, 2021.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var calText: UILabel!
-    @IBOutlet weak var outText: UILabel!
+    @IBOutlet weak var calText: UILabel! //UP Cell Text appear
+    @IBOutlet weak var outText: UILabel! //Down Result Text
     
     //Operations Variables
     var firstInput:Double = 0
@@ -86,8 +84,28 @@ class ViewController: UIViewController {
         
         //Equal Button
         else if getTag == 18 {
-            
-            
+            //Operations process
+            switch mathOp {
+            case 14:
+                outText.text = String(firstInput + secondInput)
+                calText.text = outText.text
+                break
+            case 15:
+                outText.text = String(firstInput - secondInput)
+                calText.text = outText.text
+                break
+            case 16:
+                outText.text = String(firstInput * secondInput)
+                calText.text = outText.text
+                break
+            case 17:
+                outText.text = String(firstInput / secondInput)
+                calText.text = outText.text
+                break
+            default:
+                print("unknown error")
+                break
+            }
         }
     }
     override func viewDidLoad() {

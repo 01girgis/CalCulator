@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  CalculatorInSwift
 //
-//  Created by crus on 6/20/21.
 //
+//  Created by Romany GirGis, 2021.
 
 import UIKit
 
