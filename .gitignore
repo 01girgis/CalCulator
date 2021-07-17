@@ -2,4 +2,4 @@
 Assets.xcassets/
 Base.lproj/
 Info.plist
-../CalculatorInSwift.xcodeproj/
+CalculatorInSwift/CalculatorInSwift.xcodeproj/

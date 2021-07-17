@@ -36,8 +36,11 @@ class ViewController: UIViewController {
             }
         }
         
+        //UP Cell Show Calculation
+        if getTag < 10{
+            calText.text?.append(String(getTag))
+        }
         
-        //Second Input add
         secondInput = Double(outText.text!)!
     }
     
