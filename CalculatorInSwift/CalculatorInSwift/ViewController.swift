@@ -25,6 +25,7 @@ class ViewController: UIViewController {
             //set the the value for decimal dot tag
             if outText.text == "19" {
                 outText.text = String(".")
+                calText.text?.append(".")
             }
             mathCheckState = false
         }
@@ -54,8 +55,8 @@ class ViewController: UIViewController {
         
         //First Input add
         if outText.text != "" && getTag != 10 && getTag != 18 {
-            firstInput =  Double(outText.text!)!
-        }
+            firstInput =  Double(outText.text!) ?? 0.00
+         }
         
         //clean process
         if getTag == 10 {
@@ -91,23 +92,24 @@ class ViewController: UIViewController {
         
         //Equal Button
         else if getTag == 18 {
+            //NSExpression implementation
+            let mathExpression = NSExpression(format: calText.text!)
+            let result = mathExpression.expressionValue(with: nil, context: nil) ?? 0
+            
             //Operations process
             switch mathOp {
             case 14:
-                outText.text = String(firstInput + secondInput)
-                calText.text = outText.text
+                outText.text = "\(result)"
                 break
             case 15:
-                outText.text = String(firstInput - secondInput)
-                calText.text = outText.text
+                //outText.text = String(firstInput - secondInput)
+                outText.text = "\(result)"
                 break
             case 16:
-                outText.text = String(firstInput * secondInput)
-                calText.text = outText.text
+                outText.text = "\(result)"
                 break
             case 17:
-                outText.text = String(firstInput / secondInput)
-                calText.text = outText.text
+                outText.text = "\(result)"
                 break
             default:
                 print("unknown error")
