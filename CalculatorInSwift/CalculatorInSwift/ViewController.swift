@@ -22,6 +22,10 @@ class ViewController: UIViewController {
         //Mathematical Operation
         if mathCheckState == true {
             outText.text = String(getTag)
+            //set the the value for decimal dot tag
+            if outText.text == "19" {
+                outText.text = String(".")
+            }
             mathCheckState = false
         }
         
@@ -30,7 +34,7 @@ class ViewController: UIViewController {
                 outText.text = outText.text! + String(getTag)
             }
             //Decimal calculation logic
-            if getTag == 19 && outText.text?.last != "." && outText.text != ""{
+            if getTag == 19 && outText.text?.last != "." {
                 outText.text = outText.text! + "."
                 calText.text?.append(".")
             }
@@ -41,7 +45,7 @@ class ViewController: UIViewController {
             calText.text?.append(String(getTag))
         }
         
-        secondInput = Double(outText.text!)!
+        secondInput = Double(outText.text!) ?? 0.00 //Unwrap Safely
     }
     
     //Mathematical Symbols Action
