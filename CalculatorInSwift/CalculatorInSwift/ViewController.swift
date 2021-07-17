@@ -65,27 +65,45 @@ class ViewController: UIViewController {
         }
         
         //Mathematical Symbols Settings
-        else if getTag == 14 {
+        let lastDigit = calText.text?.last // fix symbols duplication
+
+        if getTag == 14 {
             outText.text = "+"
-            calText.text?.append("+")
+            if(lastDigit != "+"){
+                
+                calText.text?.append("+")
+                
+            }
             mathOp = getTag
             mathCheckState = true
         }
-        else if getTag == 15 {
+        if getTag == 15 {
             outText.text = "-"
-            calText.text?.append("-")
+            if(lastDigit != "-"){
+                
+                calText.text?.append("-")
+                
+            }
             mathOp = getTag
             mathCheckState = true
         }
-        else if getTag == 16 {
+        if getTag == 16 {
             outText.text = "*"
-            calText.text?.append("*")
+            if(lastDigit != "*"){
+                
+                calText.text?.append("*")
+                
+            }
             mathOp = getTag
             mathCheckState = true
         }
-        else if getTag == 17 {
+        if getTag == 17 {
             outText.text = "/"
-            calText.text?.append("/")
+            if(lastDigit != "/"){
+                
+                calText.text?.append("/")
+                
+            }
             mathOp = getTag
             mathCheckState = true
         }
