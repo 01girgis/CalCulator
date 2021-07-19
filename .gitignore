@@ -1,6 +1,10 @@
 .DS_Store
+
+# CalculatorInSwift
 Assets.xcassets/
 Base.lproj/
 Info.plist
 CalculatorInSwift/CalculatorInSwift.xcodeproj/
 CalculatorInSwift/CalculatorInSwift/Main.storyboard
+
+# CalculatorInObjective-c

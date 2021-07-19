@@ -64,9 +64,18 @@ class ViewController: UIViewController {
             calText.text = ""
         }
         
+        //brackets
+        if getTag == 11 {
+            outText.text = "("
+            calText.text?.append("(")
+        }
+        if getTag == 12 {
+            outText.text = ")"
+            calText.text?.append(")")
+        }
+        
         //Mathematical Symbols Settings
         let lastDigit = calText.text?.last // fix symbols duplication
-
         if getTag == 14 {
             outText.text = "+"
             if(lastDigit != "+"){
@@ -112,8 +121,7 @@ class ViewController: UIViewController {
         else if getTag == 18 {
             //NSExpression implementation
             let mathExpression = NSExpression(format: calText.text!)
-            let result = mathExpression.expressionValue(with: nil, context: nil) ?? 0
-            
+            let result = mathExpression.expressionValue(with: nil, context: nil) ?? "bad"
             //Operations process
             switch mathOp {
             case 14:
