@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import SwiftyNSException
 
 class ViewController: UIViewController {
     @IBOutlet weak var calText: UILabel! //UP Cell Text appear
@@ -119,6 +120,23 @@ class ViewController: UIViewController {
         
         //Equal Button
         else if getTag == 18 {
+            //Basic swift NSException Catch
+            do {
+
+                _ = try handle { () -> String in
+                    
+                    //NSException
+
+                    return "OK"
+                }
+
+            } catch is NSException {
+                //Exception Handler
+
+            } catch {
+                //Other error thrown.
+            }
+            
             let mathExpression = NSExpression(format: calText.text!)
             let result = mathExpression.expressionValue(with: nil, context: nil) ?? 0
             //Operations process
