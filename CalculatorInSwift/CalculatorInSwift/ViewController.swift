@@ -133,15 +133,19 @@ class ViewController: UIViewController {
                     switch self.mathOp {
                     case 14:
                         self.outText.text = "\(result)"
+                        self.outText.textColor = UIColor.white
                         break
                     case 15:
                         self.outText.text = "\(result)"
+                        self.outText.textColor = UIColor.white
                         break
                     case 16:
                         self.outText.text = "\(result)"
+                        self.outText.textColor = UIColor.white
                         break
                     case 17:
                         self.outText.text = "\(result)"
+                        self.outText.textColor = UIColor.white
                         break
                     default:
                         print("unknown error")
@@ -153,6 +157,8 @@ class ViewController: UIViewController {
                 
             } catch is NSException {
                 //Exception Handler
+                self.outText.text = "False Expression"
+                self.outText.textColor = UIColor(red: 0.86, green: 0.19, blue: 0.14, alpha: 1.00)
             } catch {
                 //Other error thrown.
             }
