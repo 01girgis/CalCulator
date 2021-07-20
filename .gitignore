@@ -6,5 +6,8 @@ Base.lproj/
 Info.plist
 CalculatorInSwift/CalculatorInSwift.xcodeproj/
 CalculatorInSwift/CalculatorInSwift/Main.storyboard
-
+# pod 
+CalculatorInSwift/Podfile/
+CalculatorInSwift/Podfile.lock
+CalculatorInSwift/Pods/
 # CalculatorInObjective-c

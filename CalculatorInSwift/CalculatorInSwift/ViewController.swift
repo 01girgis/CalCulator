@@ -119,9 +119,8 @@ class ViewController: UIViewController {
         
         //Equal Button
         else if getTag == 18 {
-            //NSExpression implementation
             let mathExpression = NSExpression(format: calText.text!)
-            let result = mathExpression.expressionValue(with: nil, context: nil) ?? "bad"
+            let result = mathExpression.expressionValue(with: nil, context: nil) ?? 0
             //Operations process
             switch mathOp {
             case 14:

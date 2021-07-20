@@ -1,0 +1,16 @@
+PODS:
+  - SwiftyNSException (2.0.0)
+
+DEPENDENCIES:
+  - SwiftyNSException
+
+SPEC REPOS:
+  trunk:
+    - SwiftyNSException
+
+SPEC CHECKSUMS:
+  SwiftyNSException: 14b2593b12fec2a29e8666a3f8db682161b3aa0a
+
+PODFILE CHECKSUM: a166bee8eb25bfc7c06a57c4d2cbaa02c9253f39
+
+COCOAPODS: 1.10.1
