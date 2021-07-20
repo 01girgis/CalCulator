@@ -35,7 +35,21 @@
             //Decimal Dot
             case 10:
                 self.calText.text = [self.calText.text stringByAppendingFormat:@"."]; break;
-           
+            
+            //Mathematical symbols
+            case 14:
+                self.calText.text = [self.calText.text stringByAppendingFormat:@"+"]; break;
+            case 13:
+                self.calText.text = [self.calText.text stringByAppendingFormat:@")"]; break;
+            case 12:
+                self.calText.text = [self.calText.text stringByAppendingFormat:@"("]; break;
+            case 15:
+                self.calText.text = [self.calText.text stringByAppendingFormat:@"-"]; break;
+            case 16:
+                self.calText.text = [self.calText.text stringByAppendingFormat:@"*"]; break;
+            case 17:
+                self.calText.text = [self.calText.text stringByAppendingFormat:@"/"]; break;
+            
             //Numbers
             default:
                 self.calText.text = [self.calText.text stringByAppendingFormat:@"%@",inputVal];
