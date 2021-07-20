@@ -8,7 +8,8 @@
 
 @interface ViewController : UIViewController
 
-
+@property (weak, nonatomic) IBOutlet UILabel *calText;
+@property (weak, nonatomic) IBOutlet UILabel *resultText;
 
 @end
 
