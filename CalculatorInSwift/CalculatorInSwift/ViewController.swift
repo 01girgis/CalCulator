@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         //First Input add
         if outText.text != "" && getTag != 10 && getTag != 18 {
             firstInput =  Double(outText.text!) ?? 0.00
-         }
+        }
         
         //clean process
         if getTag == 10 {
@@ -122,41 +122,39 @@ class ViewController: UIViewController {
         else if getTag == 18 {
             //Basic swift NSException Catch
             do {
-
+                
                 _ = try handle { () -> String in
                     
-                    //NSException
-
+                    //Check NSExpression
+                    let mathExpression = NSExpression(format: self.calText.text!)
+                    let result = mathExpression.expressionValue(with: nil, context: nil) ?? 0.00
+                    
+                    //Operations process
+                    switch self.mathOp {
+                    case 14:
+                        self.outText.text = "\(result)"
+                        break
+                    case 15:
+                        self.outText.text = "\(result)"
+                        break
+                    case 16:
+                        self.outText.text = "\(result)"
+                        break
+                    case 17:
+                        self.outText.text = "\(result)"
+                        break
+                    default:
+                        print("unknown error")
+                        break
+                    }
+                    
                     return "OK"
                 }
-
+                
             } catch is NSException {
                 //Exception Handler
-
             } catch {
                 //Other error thrown.
-            }
-            
-            let mathExpression = NSExpression(format: calText.text!)
-            let result = mathExpression.expressionValue(with: nil, context: nil) ?? 0
-            //Operations process
-            switch mathOp {
-            case 14:
-                outText.text = "\(result)"
-                break
-            case 15:
-                //outText.text = String(firstInput - secondInput)
-                outText.text = "\(result)"
-                break
-            case 16:
-                outText.text = "\(result)"
-                break
-            case 17:
-                outText.text = "\(result)"
-                break
-            default:
-                print("unknown error")
-                break
             }
         }
     }
