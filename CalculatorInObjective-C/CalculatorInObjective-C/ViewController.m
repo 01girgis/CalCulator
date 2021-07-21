@@ -56,5 +56,13 @@
                 break;
         }
     }
+    
+    //Equal Status
+    if (getTag == 18){
+           //Calaculation with NSExpression
+            NSExpression *expressMath = [NSExpression expressionWithFormat:self.calText.text];
+            NSNumber *finalResult = [expressMath expressionValueWithObject:nil context:nil];
+            self.resultText.text = finalResult.stringValue;
+        }
 }
 @end
