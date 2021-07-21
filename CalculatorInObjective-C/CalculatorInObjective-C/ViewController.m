@@ -59,10 +59,20 @@
     
     //Equal Status
     if (getTag == 18){
-           //Calaculation with NSExpression
+        //Thrown error handler
+        @try {
+            //Calaculation with NSExpression
             NSExpression *expressMath = [NSExpression expressionWithFormat:self.calText.text];
             NSNumber *finalResult = [expressMath expressionValueWithObject:nil context:nil];
             self.resultText.text = finalResult.stringValue;
         }
+        @catch (NSException *exception) {
+            //Exception Handler
+            if ([[exception name] isEqualToString:NSInvalidArgumentException]) {
+                self.resultText.text = @"Bad Expression";
+                self.resultText.textColor = UIColor.redColor;
+            }
+        }
+    }
 }
 @end
