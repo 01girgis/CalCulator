@@ -65,6 +65,7 @@
             NSExpression *expressMath = [NSExpression expressionWithFormat:self.calText.text];
             NSNumber *finalResult = [expressMath expressionValueWithObject:nil context:nil];
             self.resultText.text = finalResult.stringValue;
+            self.resultText.textColor = UIColor.whiteColor;
         }
         @catch (NSException *exception) {
             //Exception Handler
