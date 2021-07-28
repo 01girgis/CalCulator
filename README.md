@@ -48,3 +48,11 @@ i used  common library [NSException](https://github.com/broadwaylamb/SwiftyNSExc
                 //Other error thrown.
             }
 ```
+
+# Application is implemented with same GUI in both Swift & Objective-C
+
+### Samples :
+<p align="center">
+<img src="samples/1.png"  width="200" height="400" />
+<img src="samples/2.png"  width="200" height="400" />
+</p>
